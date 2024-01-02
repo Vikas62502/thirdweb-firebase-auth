@@ -16,6 +16,8 @@ export default function initializeFirebaseClient(): {
     appId: process.env.NEXT_PUBLIC_APP_ID,
   });
 
+  console.log("Firebase Client-Side Instance Created", firebaseApp);
+
   const db = getFirestore(firebaseApp);
   const auth = getAuth(firebaseApp);
 
